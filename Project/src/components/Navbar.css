@@ -1,5 +1,7 @@
 
-
+.listCss a{
+    text-decoration: none;
+}
 .navbar{
     height: 10vh;
     display: flex;
@@ -37,9 +39,7 @@
     }
 }
 @media (min-width:750px){
-    /* .toggleBtn{
-        display: none;
-    } */
+  
     .navLinks{
         display: flex;
         justify-content: space-between;
@@ -53,4 +53,5 @@
         margin-right: 50px;
         font-size: 20px;
     }
+    
 }
