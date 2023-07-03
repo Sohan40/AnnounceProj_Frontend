@@ -33,7 +33,7 @@ function Navbar() {
                 </button>
                 :null}
             </div>
-            {(showMenu|| !minWidth)?<Lists/>:null}
+            <Lists addClass={showMenu}/>
         </nav>
     )
 }
