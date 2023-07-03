@@ -20,9 +20,9 @@ function Navbar() {
     const [showMenu,setShowMenu] = useState(false);
     const [minWidth,setMinWidth] =useState(window.innerWidth<750);
     return (
-        <nav className="largeScreenNav" style={{backgroundColor: "#090B0C"}}>
-            <div className="navbar m-0">
-                <h1 className="text-white">L O G O</h1>
+        <nav className="navbar">
+            <div className="logoDiv">
+                <h1 className="text-white logoCSS">L O G O</h1>
                 {minWidth?
                 <button className="toggleBtn text-center p-0" id="toggleBtnId">
                     {!showMenu?
