@@ -6,6 +6,7 @@
 .navbar{
     height: 10vh;
     background-color: #090B0C;
+    padding: 0 16px 0 16px;
 }
 .logoDiv{
     display: flex;
@@ -32,15 +33,12 @@
     cursor: pointer;
 }
 @media (max-width:750px){
-    .navbar{
-        padding: 0;
-    }
     .logoCSS{
-        padding-top: 3px;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     .logoDiv{
         width: 100%;
-        margin: 16px;
     }
     .navLinks{
         position: fixed;
@@ -62,9 +60,8 @@
     }
 }
 @media (min-width:750px){
-
-    .navbar{
-        padding: 16px;
+    .logoCSS{
+        margin-bottom: 5px;
     }
     .navLinks{
         display: flex;
@@ -72,5 +69,4 @@
         gap: 60px;
         margin: auto 0px;
     }
-    
 }
