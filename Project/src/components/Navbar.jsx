@@ -22,13 +22,13 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logoDiv">
-                <h1 className="text-white logoCSS">L O G O</h1>
+                <h1 className="logoCSS">L O G O</h1>
                 {minWidth?
                 <button className="toggleBtn text-center p-0" id="toggleBtnId">
                     {!showMenu?
-                    (<i onClick={expand} id="bars" className="fa-solid fa-bars m-0 mt-auto" style={{color: "#DB435C", fontSize: "40px"}}></i>)
+                    (<i onClick={expand} className="fa-solid fa-bars m-0 mt-auto" style={{color: "#DB435C", fontSize: "40px"}}></i>)
                     :
-                    (<i onClick={expand} id="cross" className="fa-solid fa-xmark m-0 mt-auto " style={{color: "#DB435C" ,fontSize: "40px"}}></i>)
+                    (<i onClick={expand} className="fa-solid fa-xmark m-0 mt-auto " style={{color: "#DB435C" ,fontSize: "40px"}}></i>)
                     }
                 </button>
                 :null}
