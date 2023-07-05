@@ -37,7 +37,7 @@
     color: #DB435C;
     cursor: pointer;
 }
-.listCss a::after{
+.listCss > a::after{
     content: '';
     position: absolute;
     height: 2px;
@@ -48,10 +48,18 @@
     transform: scale(0,1);
     transition: all 0.5s;
 }
-.listCss a:hover::after{
+.listCss > a:hover::after{
     transform: scale(1,1);
 }
 @media (max-width:750px){
+    .profile::after{
+        content: 'Profile';
+        padding-left: 15px;
+    }
+    .logout::after{
+        content: 'Logout';
+        padding-left: 15px;
+    }
     .logoCSS{
         margin-top: auto;
         margin-bottom: auto;
