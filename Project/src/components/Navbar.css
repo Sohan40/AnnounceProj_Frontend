@@ -1,14 +1,16 @@
-
+/* fce373 */
 .listCss a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
+    color: #A05D69;
+    text-transform: uppercase;
 }
 .navbar{
     position: sticky;
     top: 0;
     height: 80px;
-    background-color: whitesmoke;
+    background-color: rgb(244, 244, 244);;
     padding: 0 20px;
     transition: all 0.5s;
 }
@@ -29,14 +31,6 @@
     margin-left: 0;
     font-weight: bolder;
 }
-.signBtn{
-    border-width: 2px;
-    border-color: #DB435C;
-    font-weight: bold;
-    border-radius: 8px;
-    color: #DB435C;
-    cursor: pointer;
-}
 .listCss > a::after{
     content: '';
     position: absolute;
@@ -51,7 +45,7 @@
 .listCss > a:hover::after{
     transform: scale(1,1);
 }
-@media (max-width:750px){
+@media (max-width:768px){
     .profile::after{
         content: 'Profile';
         padding-left: 15px;
@@ -70,31 +64,22 @@
     .navLinks{
         position: fixed;
         top: 80px;
-        left: -100%;
-        background-color: rgba(164, 165, 171,0.75);
+        right: -100%;
+        background-color: rgba(244, 244, 244, 0.8);
+        color: white;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         font-size: 30px;
         height: 92vh;
         transition: 1s;
     }
     .navLinks.active{
-        left: 0;
+        right: 0;
     }
     .listCss{
         text-align: center;
         padding: 20px 0 20px 0;
-        border: none;
-        border-bottom: solid;
-        border-width: 1px;
-        border-color: rgb(73, 68, 68);
-    }
-    .topElement{
-        border-top: solid;
-        border-width: 1px;
-        border-color: rgb(73, 68, 68);
     }
     .navbar{
         -webkit-box-shadow: 0px 1px 28px -15px rgba(0,0,0,0.91);
@@ -102,7 +87,7 @@
         box-shadow: 0px 1px 28px -15px rgba(0,0,0,0.91);
     }
 }
-@media (min-width:750px){
+@media (min-width:768px){
     .logoCSS{
         margin-bottom: 5px;
     }
