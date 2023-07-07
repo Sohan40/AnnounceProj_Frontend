@@ -4,11 +4,11 @@ import './Navbar.css'
 import Lists from './Lists';
 function Navbar() {
     const handleResize = () => {
-        if(window.innerWidth >=750)
+        if(window.innerWidth >750)
         {
             setShowMenu(false);
         }
-        setMinWidth(window.innerWidth < 750);
+        setMinWidth(window.innerWidth <= 750);
       };
     useEffect(() => {
         window.addEventListener('resize', handleResize);
