@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
+
 @media (max-width:750px){
 
    
@@ -12,7 +13,12 @@
         padding-right: 2rem;
     }
 }
+@media (max-width:400px){
+    .carrd-container{
+        padding: 0;
+        grid-template-columns: repeat(auto-fit,minmax(80vw,1fr));
+    }
+}
 .clubs{
   background-color:hsl(200,50%,90%);
-  min-height: 100vh;
 }

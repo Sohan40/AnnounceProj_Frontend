@@ -35,9 +35,3 @@
     
     border: 1px solid hsl(200,50%,60%); ;
  }
- @media (max-width:750px){
-.search-bar
-{  
-    width: 60vw;
-}
-}

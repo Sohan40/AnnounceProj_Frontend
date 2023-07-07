@@ -7,7 +7,7 @@ const data = [
     {
         id: crypto.randomUUID(),
         title: 'example card',
-        description: 'it is description so it describes about something'
+        description: 'it is description so it describes about something it is description so it describes about something'
     }
     ,
     {

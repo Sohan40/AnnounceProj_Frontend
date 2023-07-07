@@ -5,3 +5,8 @@
     border: none;
     border-radius: 3px;
 }
+@media (max-width:400px) {
+    .drop-down{
+        display: none;
+    }
+}
