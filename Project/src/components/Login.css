@@ -82,3 +82,10 @@
 .login-box a:hover {
     color: #4caf50;
 }
+
+.valid{
+    position: relative;
+    bottom:20px;
+    color:red;
+}
+
