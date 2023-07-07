@@ -1,0 +1,43 @@
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    padding: 40px 0%;
+ }
+ .search-icon{
+    position: absolute;
+    right: 10px;
+    opacity: 0.8;
+   
+ }
+ .group{
+     position: relative;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    
+ }
+ .search-bar
+ {   text-indent: 2px;
+      font-family: 'Merriweather';
+      font-size: 1.2rem;
+    
+     width: 37vw;
+     height: 38px;
+     border-top-right-radius: 2px;
+     border-top-left-radius: 2px;
+     border: none;
+     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+ }
+ .search-bar:focus{
+    outline: none;
+    
+    border: 1px solid hsl(200,50%,60%); ;
+ }
+ @media (max-width:750px){
+.search-bar
+{  
+    width: 60vw;
+}
+}

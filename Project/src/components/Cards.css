@@ -1,0 +1,49 @@
+
+.carrd{
+    
+   font-family: 'Merriweather';
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #777;
+    border-radius: 0.25rem;
+   
+}
+.carrd-header{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.carrd-body{
+    font-size: 0.9rem;
+}
+.carrd-footer{
+    margin-top: 1rem;
+}
+.btn{
+    --color:hsl(200,50%,50%);
+    background-color: var(--color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+     /* we have to scale with font size so em */
+}
+.btn:hover,.btn:focus{
+    background-color: hsl(200,50%,60%);
+}
+.btn.btn-outline{
+    background: none;
+    border: 1px solid var(--color);
+    color: var(--color);
+}
+.btn.btn-outline:hover,.btn.btn-outline:focus{
+    background-color: hsl(200,50%,90%);
+}
+.btn+.btn{
+    margin-left: 0.25rem;
+}
+.carrd.carrd-shadow{
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}

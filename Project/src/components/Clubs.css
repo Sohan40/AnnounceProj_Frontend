@@ -1,0 +1,18 @@
+.carrd-container{
+    padding: 1rem;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+@media (max-width:750px){
+
+   
+    .carrd-container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.clubs{
+  background-color:hsl(200,50%,90%);
+  min-height: 100vh;
+}
