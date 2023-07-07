@@ -9,6 +9,7 @@
     position: absolute;
     right: 10px;
     opacity: 0.8;
+    z-index: -1;
    
  }
  .group{
@@ -18,18 +19,18 @@
     align-items: center;
     
  }
- .search-bar
- {   text-indent: 2px;
-      font-family: 'Merriweather';
-      font-size: 1.2rem;
-    
-     width: 37vw;
-     height: 38px;
-     border-top-right-radius: 2px;
-     border-top-left-radius: 2px;
-     border: none;
-     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
- }
+ .search-bar{
+   text-indent: 2px;
+   font-family: 'Merriweather';
+   font-size: 1.2rem;
+   z-index: -1;
+   width: 37vw;
+   height: 38px;
+   border-top-right-radius: 2px;
+   border-top-left-radius: 2px;
+   border: none;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
  .search-bar:focus{
     outline: none;
     

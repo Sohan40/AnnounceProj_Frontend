@@ -11,7 +11,7 @@
     top: 0;
     height: 80px;
     background-color: rgb(244, 244, 244);;
-    padding: 0 20px;
+    padding: 0 50px;
     transition: all 0.5s;
 }
 .logoDiv{
@@ -73,6 +73,7 @@
         font-size: 30px;
         height: 92vh;
         transition: 1s;
+        z-index: 1;
     }
     .navLinks.active{
         right: 0;
@@ -85,6 +86,7 @@
         -webkit-box-shadow: 0px 1px 28px -15px rgba(0,0,0,0.91);
         -moz-box-shadow: 0px 1px 28px -15px rgba(0,0,0,0.91);
         box-shadow: 0px 1px 28px -15px rgba(0,0,0,0.91);
+        padding: 0 30px;
     }
 }
 @media (min-width:768px){
@@ -100,7 +102,7 @@
     .navLinks{
         display: flex;
         justify-content: space-between;
-        gap: 60px;
+        gap: 80px;
         margin: auto 0px;
     }
 }

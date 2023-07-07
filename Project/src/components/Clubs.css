@@ -15,4 +15,6 @@
 .clubs{
   background-color:hsl(200,50%,90%);
   min-height: 100vh;
+  position: relative;
+  z-index: -2;
 }
