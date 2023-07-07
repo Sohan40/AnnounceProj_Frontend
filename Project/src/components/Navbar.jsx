@@ -4,11 +4,11 @@ import './Navbar.css'
 import Lists from './Lists';
 function Navbar() {
     const handleResize = () => {
-        if(window.innerWidth >750)
+        if(window.innerWidth >768)
         {
             setShowMenu(false);
         }
-        setMinWidth(window.innerWidth <= 750);
+        setMinWidth(window.innerWidth <= 768);
       };
     useEffect(() => {
         window.addEventListener('resize', handleResize);
@@ -18,7 +18,7 @@ function Navbar() {
         setShowMenu(!showMenu);
     }
     const [showMenu,setShowMenu] = useState(false);
-    const [minWidth,setMinWidth] =useState(window.innerWidth<750);
+    const [minWidth,setMinWidth] =useState(window.innerWidth<768);
     return (
         <nav className="navbar">
             <div className="logoDiv">
