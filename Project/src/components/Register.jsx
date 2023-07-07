@@ -32,7 +32,8 @@ export default function Register(){
               <div className="mb-3">
                   <label htmlFor="year" className="form-label">Year</label>
                   <select className="form-select shadow-none" name="year" id="year">
-                      <option  value="1">1</option>
+                      <option values="0">--Select Year--</option>
+                      <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
@@ -42,6 +43,7 @@ export default function Register(){
               <div className="mb-3">
                   <label htmlFor="branch" className="form-label">Branch</label>
                   <select className="form-select shadow-none" name="branch" id="branch">
+                      <option value="0">--Select Branch--</option>
                       <option value="Biotechnology">Biotechnology</option>
                       <option value="Chemical Engineering">Chemical Engineering</option>
                       <option value="Chemistry">Chemistry</option>
