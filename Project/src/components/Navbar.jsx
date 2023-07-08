@@ -18,7 +18,7 @@ function Navbar() {
         setShowMenu(!showMenu);
     }
     const [showMenu,setShowMenu] = useState(false);
-    const [minWidth,setMinWidth] =useState(window.innerWidth<768);
+    const [minWidth,setMinWidth] =useState(window.innerWidth<=768);
     return (
         <nav className="navbar">
             <div className="logoDiv">
