@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from './Home'
-import Login from "./Login"
-import Register from "./Register"
+import Login from "./Login and Register/Login"
+import Register from "./Login and Register/Register"
 import Clubs from './Clubs'
 import Navbar  from "./Navbar"
 function App() {
