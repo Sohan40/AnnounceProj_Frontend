@@ -2,7 +2,6 @@ import "./Register.css"
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ErrorDisplay from "./ErrorDisplay";
-
 export default function Register() {
     const [type, setType] = useState("password");
     const { register, formState: { errors }, handleSubmit } = useForm();
