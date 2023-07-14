@@ -5,12 +5,17 @@
     gap:20px;
     padding: 40px 0%;
  }
- .search-icon{
-    position: absolute;
-    right: 10px;
-    opacity: 0.8;
-    z-index: -1;
+ .for-search-icon{
+   position: relative; 
    
+ }
+ .search-icon{
+   
+    position: absolute;
+    display: inline-block;
+    opacity: 0.8;
+    top : 6px;
+   left: 1px;
  }
  .group{
      position: relative;
@@ -20,10 +25,9 @@
     
  }
  .search-bar{
-   text-indent: 2px;
+   text-indent: 22px;
    font-family: 'Merriweather';
    font-size: 1.2rem;
-   z-index: -1;
    width: 37vw;
    height: 38px;
    border-top-right-radius: 2px;

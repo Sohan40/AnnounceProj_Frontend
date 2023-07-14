@@ -7,11 +7,13 @@ export default function Search() {
         <div className="search-container">
             <div className="group">
                 <Dropdown />
-                <input className="search-bar" type="text" />
-                <div className='search-icon'>
-                <SearchIcon/>
+                <div className='for-search-icon'>
+                    <div className='search-icon'>
+                        <SearchIcon />
+                    </div>
+                    <input className="search-bar" type="text" />
                 </div>
-               
+
             </div>
         </div>
 

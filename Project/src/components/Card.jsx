@@ -1,9 +1,13 @@
 import './Cards.css'
+import MyImage from './images/image1.jpeg'
 export default function Card({ title, desc }) {
 
     return (
 
         <div className="carrd carrd-shadow">
+            <div className='carrd-image'>
+              <img src={ MyImage } className='carrd-image'/>
+            </div>
             <div className="carrd-header">
                 {title}
             </div>
