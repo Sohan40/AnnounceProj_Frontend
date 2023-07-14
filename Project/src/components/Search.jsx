@@ -1,9 +1,12 @@
 import './Search.css'
 import Dropdown from './Dropdown'
 import SearchIcon from '@mui/icons-material/Search';
-export default function Search() {
-    return (
+import { useState } from 'react';
+export default function Search({query,setQuery}) {
+    
 
+    return (
+        
         <div className="search-container">
             <div className="group">
                 <Dropdown />
@@ -11,7 +14,7 @@ export default function Search() {
                     <div className='search-icon'>
                         <SearchIcon />
                     </div>
-                    <input className="search-bar" type="text" />
+                    <input value={query} onChange={e=>{setQuery(e.target.value)}}  className="search-bar"  type="text" />
                 </div>
 
             </div>
