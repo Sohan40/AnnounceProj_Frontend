@@ -6,38 +6,38 @@ import { useState } from 'react'
 const data = [
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'CSEA',
         description: 'it is description so it describes about something'
     }
     ,
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'ECEA',
         description: 'it is description so it describes about something'
     },
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'EEEA',
         description: 'it is description so it describes about something'
     },
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'InnovationGarage',
         description: 'it is description so it describes about something'
     },
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'ASTRONOMY',
         description: 'it is description so it describes about something'
     },
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'NatureClub',
         description: 'it is description so it describes about something'
     },
     {
         id: crypto.randomUUID(),
-        title: 'example card',
+        title: 'DanceAndDrama',
         description: 'it is description so it describes about something'
     },
     {
@@ -73,15 +73,19 @@ const data = [
 ]
 export default function Clubs() {
     const [details, Setdetails] = useState(data);
-
+    const [query,setQuery]=useState("");
+    const filteredDetails=details.filter(item=>{
+        return item.title.toLowerCase().includes(query.toLowerCase());
+    
+    })
     return (
 
         <div className='clubs'>
-            <Search />
+            <Search  query={query} setQuery={setQuery}/>
             <div className="carrd-container">
 
                 {
-                    details.map((item) => {
+                    filteredDetails.map((item) => {
                         return(<Card key={item.id} title={item.title} desc={item.description} />)   
                     })
                 }
