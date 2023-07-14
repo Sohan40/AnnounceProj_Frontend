@@ -1,9 +1,10 @@
 .carrd-container{
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
+
 @media (max-width:750px){
 
    
@@ -12,9 +13,21 @@
         padding-right: 2rem;
     }
 }
+@media (min-width:750px){
+
+   
+    .carrd-container{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+@media (max-width:400px){
+    .carrd-container{
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit,minmax(80vw,1fr));
+    }
+}
 .clubs{
-  background-color:hsl(200,50%,90%);
+  background-color:hsl(199, 49%, 81%);
   min-height: 100vh;
-  position: relative;
-  z-index: -2;
 }

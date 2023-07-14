@@ -1,22 +1,42 @@
 
 .carrd{
-    
+    cursor: pointer;
+    overflow: hidden;
    font-family: 'Merriweather';
     background-color: white;
-    padding: 1rem;
+   
     border: 1px solid #777;
     border-radius: 0.25rem;
    
 }
+.carrd-image>img{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
 .carrd-header{
+    padding: 1rem;
+    padding-bottom: 0;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 .carrd-body{
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 0.9rem;
 }
 .carrd-footer{
+    padding: 1rem;
+    padding-top: 0;
     margin-top: 1rem;
+}
+
+.carrd:hover>.carrd-image>img{
+    transform: scale(1.025);
 }
 .btn{
     --color:hsl(200,50%,50%);
@@ -41,7 +61,7 @@
     background-color: hsl(200,50%,90%);
 }
 .btn+.btn{
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
 }
 .carrd.carrd-shadow{
     border: none;
