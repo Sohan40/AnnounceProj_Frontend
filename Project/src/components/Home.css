@@ -1,7 +1,8 @@
 .home{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+    min-width: 300px;
+    display: grid;
+    gap: 0;
 }
 .homeHead{
     font-style: italic;
@@ -9,6 +10,9 @@
 .image{
     position: relative;
     overflow: hidden;
+    background-image: url('https://media.licdn.com/dms/image/D5603AQEi51Zg9NiFgg/profile-displayphoto-shrink_800_800/0/1665687871263?e=2147483647&v=beta&t=26G9ZEiAETWVoZ__se0-Phz5G9OJQN5yod_fYfYJyRk');
+    background-size: cover;
+    background-position: center;
     z-index: -1;
 }
 .image::before{
@@ -40,27 +44,20 @@
     transition: 0.5s;
 }
 @media (max-width:768px){
+    .home{
+        grid-template-rows: 1fr 1fr;
+    }
     .content{
+        padding: 15px;
+        padding-top: 5vh;
         background-image: linear-gradient(to bottom,#71bac2,#71bac2,#44B1B4,#44B1B4);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        text-align: center;
         gap: 15px;
         padding-bottom: 20px;
-    }
-    .smallDevice{
-        display: flex;
-        flex-direction: column;
-    }
-    .content{
-        flex: 1;
-    }
-    .image{
-        flex: 1;
-        background-image: url('https://media.licdn.com/dms/image/D5603AQEi51Zg9NiFgg/profile-displayphoto-shrink_800_800/0/1665687871263?e=2147483647&v=beta&t=26G9ZEiAETWVoZ__se0-Phz5G9OJQN5yod_fYfYJyRk');
-        background-size: cover;
-        background-position: center;
     }
     .image::before{
         top: -35px;
@@ -71,9 +68,12 @@
         z-index: -1;
     }
 }
-@media (min-width:768px){
+@media (min-width:769px){
+    .home{
+        grid-template-columns: 1fr 1fr;
+    }
     .content{
-        background-image: linear-gradient(106.5deg,#71bac2,#71bac2,#44B1B4,#44B1B4);
+        background-image: linear-gradient(to right,#71bac2,#71bac2,#44B1B4,#44B1B4);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -81,17 +81,12 @@
         padding-left: 10%;
         gap: 40px;
     }
-    .image{
-        background-image: url('https://media.licdn.com/dms/image/D5603AQEi51Zg9NiFgg/profile-displayphoto-shrink_800_800/0/1665687871263?e=2147483647&v=beta&t=26G9ZEiAETWVoZ__se0-Phz5G9OJQN5yod_fYfYJyRk');
-        background-size: cover;
-        background-position: center;
-    }
     .image::before{
         top: 35%;
         height: 150%;
         width: 90%;
         left: -200px;
-        transform: translateY(-50%) rotate(15deg);
+        transform: translateY(-50%) rotate(5deg);
     }
 }
 @media (min-width:1000px){
@@ -99,8 +94,8 @@
         top: 35%;
         height: 150%;
         width: 90%;
-        left: -300px;
-        transform: translateY(-50%) rotate(15deg);
+        left: -240px;
+        transform: translateY(-50%) rotate(10deg);
     }
 }
 @media (min-width:1358px){
