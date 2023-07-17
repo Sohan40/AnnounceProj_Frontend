@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
+import Logo from './images/logo.png'
 import './Navbar.css'
 import Lists from './Lists';
 function Navbar() {
@@ -22,7 +23,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logoDiv">
-                <h1 className="logoCSS">L O G O</h1>
+                <img src={Logo} className='logoCss'/>
                 {minWidth?
                 <button className="toggleBtn text-center p-0" id="toggleBtnId">
                     {!showMenu?

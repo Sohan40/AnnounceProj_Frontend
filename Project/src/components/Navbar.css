@@ -6,7 +6,11 @@
     color: #A05D69;
     text-transform: uppercase;
 }
+.logoCss{
+    width: 200px;
+}
 .navbar{
+    min-width: 300px;
     position: sticky;
     top: 0;
     height: 80px;
@@ -26,7 +30,9 @@
     width: 50px;
     height: 50px;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: rgb(224, 223, 219);
+    margin: auto 0;
     cursor: pointer;
 }
 .navLinks{
@@ -58,10 +64,6 @@
         content: 'Logout';
         padding-left: 15px;
     }
-    .logoCSS{
-        margin-top: auto;
-        margin-bottom: auto;
-    }
     .logoDiv{
         width: 100%;
     }
@@ -87,10 +89,10 @@
         padding: 20px 0 20px 0;
     }
     .navbar{
-        padding: 0 30px;
+        padding: 0 15px;
     }
 }
-@media (min-width:768px){
+@media (min-width:769px){
     .logoCSS{
         margin-bottom: 5px;
     }
