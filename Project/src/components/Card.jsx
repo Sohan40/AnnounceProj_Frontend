@@ -1,15 +1,15 @@
 import './Cards.css'
-import MyImage from './images/image1.jpeg'
-export default function Card({ title, desc }) {
-
+import { useNavigate } from 'react-router-dom';
+export default function Card({ ClubId,name, desc,imag }) {
+    const navigate = useNavigate();
     return (
 
-        <div className="carrd carrd-shadow">
+        <div onClick={()=>navigate(`/clubPage/${ClubId}`)} className="carrd carrd-shadow">
             <div className='carrd-image'>
-              <img src={ MyImage } className='carrd-image'/>
+              <img src={ imag } className='carrd-image'/>
             </div>
             <div className="carrd-header">
-                {title}
+                {name}
             </div>
             <div className="carrd-body">
                 {desc}

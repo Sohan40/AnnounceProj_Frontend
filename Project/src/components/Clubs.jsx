@@ -3,79 +3,12 @@ import './Clubs.css'
 import Search from './Search'
 import Card from './Card'
 import { useState } from 'react'
-const data = [
-    {
-        id: crypto.randomUUID(),
-        title: 'CSEA',
-        description: 'it is description so it describes about something'
-    }
-    ,
-    {
-        id: crypto.randomUUID(),
-        title: 'ECEA',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'EEEA',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'InnovationGarage',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'ASTRONOMY',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'NatureClub',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'DanceAndDrama',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    },
-    {
-        id: crypto.randomUUID(),
-        title: 'example card',
-        description: 'it is description so it describes about something'
-    }
-]
+import data from './clubinfo'
 export default function Clubs() {
     const [details, Setdetails] = useState(data);
     const [query,setQuery]=useState("");
     const filteredDetails=details.filter(item=>{
-        return item.title.toLowerCase().includes(query.toLowerCase());
+        return item.name.toLowerCase().includes(query.toLowerCase());
     
     })
     return (
@@ -86,7 +19,7 @@ export default function Clubs() {
 
                 {
                     filteredDetails.map((item) => {
-                        return(<Card key={item.id} title={item.title} desc={item.description} />)   
+                        return(<Card key={item.clubId} ClubId={item.clubId}  name={item.name} imag={item.img} desc={item.description} />)   
                     })
                 }
             </div>

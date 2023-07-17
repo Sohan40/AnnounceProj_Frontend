@@ -22,7 +22,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import MyImage from '../images/image1.jpeg'
 
 export default function ImgMediaCard({event,isCompleted}) {
   return (
@@ -31,7 +30,7 @@ export default function ImgMediaCard({event,isCompleted}) {
         component="img"
         alt="green iguana"
         height="140"
-        image={event.img ? event.img:MyImage}
+        image={event.img ? event.img:"hi"}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
