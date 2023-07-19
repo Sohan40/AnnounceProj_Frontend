@@ -1,18 +1,16 @@
 import "./AddEvent.css"
 import { useForm } from "react-hook-form";
 
-function AddEvent({setAddEvent,events})
+function AddEvent({setAddEvent,setallEvents,allEvents})
 {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        data.id=8;
-        events.push(data);
+        data.id=crypto.randomUUID();
+      setallEvents((prevData)=>{
+       return ([...prevData,data])
+      });
         setAddEvent(false);
     };
-    function addNewEvent(e)
-    {
-        e.preventDefault;
-    }
     return(
         <form className="add-event" onSubmit={handleSubmit(onSubmit)}>
             <div>

@@ -7,16 +7,33 @@
 
 */
 
-.club-profile h2{
+.background-text h2{
     font-size: 3rem;
     padding-bottom: 2rem;
 }
 .club-profile{
-    background-image: url('{club.img}'); 
    background-size: contain; 
-   color: white;
    background-color:hsl(195, 4%, 42%);
-   font-size: 1.5rem;
    height: 40vh;
-    padding: 3%;
+}
+.background-text{
+    position: absolute;
+    font-size: 1.5rem;
+    height: 40vh;
+
+    top:73px;
+    color: white;
+    padding: 20px;
+}
+@media (max-width:500px)
+{
+    .background-text h2{
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+     .background-text{
+        
+         font-size: 1.5rem;
+         
+     }
 }
