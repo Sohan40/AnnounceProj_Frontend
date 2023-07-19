@@ -19,7 +19,7 @@ export default function Clubs() {
 
                 {
                     filteredDetails.map((item) => {
-                        return(<Card key={item.clubId} ClubId={item.clubId}  name={item.name} imag={item.img} desc={item.description} />)   
+                    return(<Card key={item.clubId} ClubId={item.clubId}  name={item.name} imag={item.img} desc={item.description} />)   
                     })
                 }
             </div>

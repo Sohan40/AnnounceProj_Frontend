@@ -2,7 +2,7 @@ const clubinfo = [{
   clubId: "NITWBUZZ1",
   name: 'Chess Club',
   description: 'A club for chess enthusiasts to practice and compete.',
-  img: "https://media.gettyimages.com/id/956353304/photo/chess-queen-on-board.jpg?s=612x612&w=0&k=20&c=1MiMFtn9Sv9P29VylNSZZB60rfoU6SPUbWyygLE2LNs=",
+  img: "https://c4.wallpaperflare.com/wallpaper/908/534/554/chess-4k-8k-hd-wallpaper-preview.jpg",
   events: [
     {
       id: crypto.randomUUID(),

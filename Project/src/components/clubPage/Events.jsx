@@ -2,6 +2,7 @@ import Event from "./Event";
 import { useState, useEffect } from "react";
 import AddEvent from "./AddEvent";
 import "./Events.css"
+import Noevents from "./Noevents";
 
 
 
@@ -36,7 +37,7 @@ function Events({ events ,id}) {
     const currDate = getDate(new Date());
     const [upcomingEvents, setUpcominEvents] = useState(true);
     const [selectEvent, setSelectEvent] = useState(events.filter((event) => getDate(event.date) >= currDate));
-    const isAdmin=(id==='0')?true:false;
+    const isAdmin=(id==='NITWBUZZ1')?true:false;
     const [addEvent,setAddEvent]=useState(false);
     function changeEvent(e) {
         if (e.target.name === "upcoming") {
@@ -78,7 +79,7 @@ function Events({ events ,id}) {
                         )
                     }
                 </div>
-                : <p>No Events</p>}
+                : <Noevents/>}
         </div>
     );
 }

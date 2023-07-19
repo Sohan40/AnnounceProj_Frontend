@@ -1,10 +1,14 @@
 import "./ClubProfile.css"
 
-function ClubProfile({club})
-{
+function ClubProfile({ club }) {
     return (
-        <div className="club-profile">
-            <img src={club.img} alt="club img" className="club-image"/>
+        <div className="club-profile" style={{
+            backgroundImage:`url(${club.img})`,
+            width:'100%',
+            backgroundPosition:'center',
+            backgroundSize:'cover',
+             backgroundBlendMode:'multiply'
+            }} >
             <h2>{club.name}</h2>
             <p>{club.description}</p>
         </div>

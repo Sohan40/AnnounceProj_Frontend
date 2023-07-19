@@ -1,4 +1,5 @@
 .clubpage{
-    background-color:hsl(199, 49%, 81%);
+    background-color:whitesmoke;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased
   }

@@ -5,16 +5,18 @@
     margin-top: 5px;
 }
 
-.club-image
-{
-    width: 100%;
-    height: 250px;
-} */
-  
-.club-profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 12.5%;
-    margin-right: 20px;
+*/
+
+.club-profile h2{
+    font-size: 3rem;
+    padding-bottom: 2rem;
 }
-  
+.club-profile{
+    background-image: url('{club.img}'); 
+   background-size: contain; 
+   color: white;
+   background-color:hsl(195, 4%, 42%);
+   font-size: 1.5rem;
+   height: 40vh;
+    padding: 3%;
+}

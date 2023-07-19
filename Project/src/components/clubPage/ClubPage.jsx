@@ -12,8 +12,6 @@ function ClubPage()
    
    
         let ourDataObject=clubinfo.find(element=>{return element.clubId===id})
-        console.log(id);
-        console.log(ourDataObject);
     return(
         <div className="clubpage">
             <ClubProfile club={ourDataObject} />
