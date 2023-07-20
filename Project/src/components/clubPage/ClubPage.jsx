@@ -10,11 +10,6 @@ function ClubPage()
 {   
     const {id}=useParams();
     let ourDataObject=clubinfo.find(element=>{return element.clubId===id});
-    const [examp,setexamp]=useState(true);
-    useEffect(()=>{
-        setexamp(!examp);
-    },[ourDataObject])
-    console.log(ourDataObject);
     return(
         <div className="clubpage">
             <ClubProfile club={ourDataObject} />
