@@ -50,7 +50,7 @@
     .content{
         padding: 15px;
         padding-top: 5vh;
-        background-image: linear-gradient(to bottom,#71bac2,#71bac2,#44B1B4,#44B1B4);
+        background-image: linear-gradient(to bottom,#71bac2 20%,#44B1B4);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -73,7 +73,7 @@
         grid-template-columns: 1fr 1fr;
     }
     .content{
-        background-image: linear-gradient(to right,#71bac2,#71bac2,#44B1B4,#44B1B4);
+        background-image: linear-gradient(to right,#71bac2 20%,#44B1B4);
         display: flex;
         flex-direction: column;
         justify-content: center;
