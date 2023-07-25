@@ -6,7 +6,13 @@ import Clubs from './Clubs'
 import Navbar  from "./Navbar"
 import ClubPage from "./clubPage/ClubPage"
 import Footer from "./Footer"
+window.onbeforeunload=(event)=>{
+  event.preventDefault();
+  return "";
+}
+
 function App() {
+ 
   return (
     <>
      <Navbar/>

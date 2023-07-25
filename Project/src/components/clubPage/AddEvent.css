@@ -1,14 +1,19 @@
 .add-event-button {
-  
+   display: block;
     padding: 2px 10px;
     border: none;
     border-radius: 5px;
-    margin: 5px;
     color: #ffffff;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    background-color: green ;
+    margin :0 auto;
   }
+  .add-event-button:hover {
+   
+     background-color: hsl(120, 100%, 30%) ;
+   }
 .sub-form-comp{
  display: flex;
  gap:.25rem;
@@ -36,12 +41,14 @@
   width: 100vw;
   top:0;
   z-index: 200;
+  animation: opacityTrans 0.15s ease-in;
  }
  .add-event{
   border-radius: 8px;
   padding: 23px 3%;
   max-width: min(600px,80%);
   background-color:whitesmoke;
+  border: 10px solid rgb(51 51 51 /0.1);
   /* margin: 0 auto; */
  
  }
@@ -50,8 +57,21 @@
    margin-top: 0;
  }
  .evnt-btn-close{
+  display: block;
   outline: none;
   border: none;
-  color: rgb(208, 77, 77);
-  margin-left:99% ;
+  color: rgb(198, 19, 19);
+  margin-left: auto;
+  margin-right: -2.6%
  }
+ .evnt-btn-close:hover{
+  color: hsl(0, 79%, 57%);
+ }
+ @keyframes opacityTrans{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity:1;
+}
+}

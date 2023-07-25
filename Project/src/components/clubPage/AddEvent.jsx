@@ -15,8 +15,8 @@ function AddEvent({ setAddEvent, setallEvents, allEvents }) {
         <div className="background-for-addevent">
             
             <form className="add-event" onSubmit={handleSubmit(onSubmit)}>
-            <button onClick={(e) => { e.preventDefault(); setAddEvent(false) }} className="evnt-btn-close"><CancelIcon/></button>
-                <h2 className="event-form-title">Enter Event Details !</h2>
+            <button  onClick={(e) => { e.preventDefault(); setAddEvent(false) }} className="evnt-btn-close"><CancelIcon/></button>
+                <h2 className="event-form-title" >Enter Event Details !</h2>
 
                 <div className="sub-form-comp">
                     <label>Event Name : </label>
@@ -35,7 +35,7 @@ function AddEvent({ setAddEvent, setallEvents, allEvents }) {
                 </div>
 
 
-                <div className="sub-form-comp">
+                <div className="sub-form-comp ">
                     <label>Event Date : </label>
                     <input {...register("date", { required: true })}
                         name="date"
@@ -51,7 +51,7 @@ function AddEvent({ setAddEvent, setallEvents, allEvents }) {
 
                 <div>
 
-                    <button className="add-event-button mt-2" style={{ backgroundColor: "green" ,marginLeft:"40%"}}>submit</button>
+                    <button className="add-event-button mt-2" >submit</button>
                 </div>
             </form>
         </div>
