@@ -5,10 +5,12 @@ import Register from "./loginRegister/Register"
 import Clubs from './Clubs'
 import Navbar  from "./Navbar"
 import ClubPage from "./clubPage/ClubPage"
+import Footer from "./Footer"
 window.onbeforeunload=(event)=>{
   event.preventDefault();
   return "";
 }
+
 function App() {
  
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/Clubs" element={<Clubs/>}/>
         <Route path="/ClubPage/:id" element={<ClubPage/>}/>
       </Routes>
+     <Footer/>
     </>
   )
 }

@@ -1,0 +1,11 @@
+
+img{
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+div.profile.row::after{
+    display: none;
+}

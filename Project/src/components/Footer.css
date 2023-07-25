@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.footerContainer{
+    background-color: #71bac2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.footerInfo{
+    font-size: 20px;
+    margin: 0;
+    color: white;
+}
+.footerLinks{
+    font-size: 16px;
+    color: white;
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+.footerLinks:hover{
+    font-size: 20px;
+    color: black;
+}
+@media (min-width: 769px) {
+    .breakDisplay{
+        display: none;
+    }
+    .footerContainer{
+        padding: 20px 0;
+    }
+}
