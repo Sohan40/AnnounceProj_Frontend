@@ -6,6 +6,7 @@ import Clubs from './Clubs'
 import Navbar  from "./Navbar"
 import ClubPage from "./clubPage/ClubPage"
 import Footer from "./Footer"
+import Profile from "./Profile/Profile"
 window.onbeforeunload=(event)=>{
   event.preventDefault();
   return "";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/Clubs" element={<Clubs/>}/>
         <Route path="/ClubPage/:id" element={<ClubPage/>}/>
+        <Route path="/Profile" element={<Profile/>}/>
       </Routes>
      <Footer/>
     </>

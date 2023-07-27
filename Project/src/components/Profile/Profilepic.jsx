@@ -8,7 +8,7 @@ export default function Profilepic() {
   return (
     <div>
       <div className='image-fluid'>
-          <img src={img}></img>
+          <img className='sohan-profile' src={img}></img>
       </div>
       <ProfileModal pic={setImg}/>
       

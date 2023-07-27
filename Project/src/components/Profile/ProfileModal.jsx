@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {useForm} from 'react-hook-form'
 import Backdrop from '@mui/material/Backdrop';
-import axios from 'axios'
+import axios from 'axios';
 const style = {
     position: 'absolute',
     top: '50%',
@@ -17,7 +17,6 @@ const style = {
     border: 'none',
     borderRadius:'5px',
     boxShadow:'5px 10px 8px #888888',
-    boxShadow: 24,
     display:'flex',
     justifyContent:'center',
     p:4
