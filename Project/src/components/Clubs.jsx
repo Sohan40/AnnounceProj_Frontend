@@ -16,7 +16,6 @@ export default function Clubs() {
         <div className='clubs'>
             <Search  query={query} setQuery={setQuery}/>
             <div className="carrd-container">
-
                 {
                     filteredDetails.map((item) => {
                     return(<Card key={item.clubId} ClubId={item.clubId}  name={item.name} imag={item.img} desc={item.description} />)   

@@ -2,11 +2,21 @@ import "./Login.css"
 import ErrorDisplay from "./ErrorDisplay"
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
     const [type, setType] = useState("password");
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = async (data) => {
+        try {
+            let res=await axios.post("/api/user/login",data)
+            console.log(res)
+        } catch (error) {
+            console.log(error)
+        }
+        
+
+    }
     return (
         <div className="login">
             <div className="container">
@@ -16,11 +26,11 @@ export default function Login() {
                             <h2>Login</h2>
                             <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
                                 <div className="mb-2">
-                                    <input  {...register("username", { required: "username required" })}
-                                        style={{ backgroundColor: errors.username?.type === 'required' && 'rgba(255, 110,110,0.553)' }}
-                                        aria-invalid={errors.username ? "true" : "false"}
-                                        type="text" className="form-control shadow-none" name="username" id="username" placeholder="Your username" />
-                                    <ErrorDisplay errors={errors} name="username" b="13px" />
+                                    <input  {...register("email", { required: "email required" })}
+                                        style={{ backgroundColor: errors.email?.type === 'required' && 'rgba(255, 110,110,0.553)' }}
+                                        aria-invalid={errors.email ? "true" : "false"}
+                                        type="text" className="form-control shadow-none" name="email" id="email" placeholder="Your email" />
+                                    <ErrorDisplay errors={errors} name="email" b="13px" />
                                 </div>
 
                                 <div className="mb-2 ">
