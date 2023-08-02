@@ -2,11 +2,21 @@ import "./Register.css"
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ErrorDisplay from "./ErrorDisplay";
+import axios from "axios";
 export default function Register() {
     const [type, setType] = useState("password");
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const [first, setFirst] = useState({ year: true, branch: true });
-    const onSubmit = (data) => console.log(data);
+    const [first, setFirst] = useState({ year: true, department: true });
+    const onSubmit = async (data) => {
+        try {
+
+            const res=await axios.post("/api/user/register",data)
+            console.log(res)
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     function changeFirst(name) {
         setFirst((prev) => { return { ...first, [name]: false } });
     }
@@ -64,12 +74,12 @@ export default function Register() {
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="branch" className="form-label">Branch</label>
+                            <label htmlFor="department" className="form-label">department</label>
                             <select
-                                {...register("branch", { required: true, min: 1, onChange: () => { changeFirst("branch") } })}
-                                aria-invalid={errors.branch ? "true" : "false"}
-                                className="form-select shadow-none" name="branch" id="branch" >
-                                {first.branch && <option value="0">--Select Branch--</option>}
+                                {...register("department", { required: true, min: 1, onChange: () => { changeFirst("department") } })}
+                                aria-invalid={errors.department ? "true" : "false"}
+                                className="form-select shadow-none" name="department" id="department" >
+                                {first.department && <option value="0">--Select department--</option>}
                                 <option value="Biotechnology">Biotechnology</option>
                                 <option value="Chemical Engineering">Chemical Engineering</option>
                                 <option value="Chemistry">Chemistry</option>
@@ -80,7 +90,7 @@ export default function Register() {
                                 <option value="Mechanical Engineering">Mechanical Engineering</option>
                                 <option value="Metallurgical and Materials Engineering">Metallurgical and Materials Engineering</option>
                             </select>
-                            <ErrorDisplay errors={errors} name="branch" typename="min" />
+                            <ErrorDisplay errors={errors} name="department" typename="min" />
                         </div>
 
                         <div className="mb-3">
