@@ -3,7 +3,7 @@
     text-decoration: none;
     font-size: 18px;
     position: relative;
-    color: #A05D69;
+    color: #a46f59;
     text-transform: uppercase;
 }
 .logoCss{
@@ -31,7 +31,7 @@
     height: 50px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(224, 223, 219);
+    background-color: #F4F4F4;
     margin: auto 0;
     cursor: pointer;
 }
@@ -46,7 +46,7 @@
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #DB435C;
+    background-color: #658F9C;
     bottom: 0;
     left: 0;
     transform: scale(0,1);

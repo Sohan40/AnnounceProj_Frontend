@@ -6,3 +6,12 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --blue0: #ADD8E6;
+    --blue1: #94BFCD;
+    --blue2: #7DA7B4;
+    --blue3: #658F9C;
+    --skin0: #EEC9BC;
+    --skin1: #D4B1A4;
+    --skin2: #a46f59;
+}

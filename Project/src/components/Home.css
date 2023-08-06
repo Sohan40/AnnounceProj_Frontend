@@ -17,7 +17,7 @@
 }
 .image::before{
     content: '';
-    background-color: #44B1B4;
+    background-color: #658F9C;
     position: absolute;
     -webkit-box-shadow: 2px 7px 42px 9px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 7px 42px 9px rgba(0,0,0,0.75);
@@ -50,7 +50,7 @@
     .content{
         padding: 15px;
         padding-top: 5vh;
-        background-image: linear-gradient(to bottom,#71bac2 20%,#44B1B4);
+        background-image: linear-gradient(to bottom,#7DA7B4 20%,#658F9C);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -73,7 +73,7 @@
         grid-template-columns: 1fr 1fr;
     }
     .content{
-        background-image: linear-gradient(to right,#71bac2 20%,#44B1B4);
+        background-image: linear-gradient(to right,#7DA7B4 20%,#658F9C);
         display: flex;
         flex-direction: column;
         justify-content: center;
