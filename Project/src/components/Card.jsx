@@ -15,8 +15,7 @@ export default function Card({ ClubId,name, desc,imag }) {
                 {desc}
             </div>
             <div className="carrd-footer">
-                <button className="btn">Deatils</button>
-                <button className="btn btn-outline" >contact-sell</button>
+                <button className="btn" style={{backgroundColor:"#658F9C"}}>Details</button>
             </div>
         </div>
 

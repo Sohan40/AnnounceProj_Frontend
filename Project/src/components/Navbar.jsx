@@ -27,9 +27,9 @@ function Navbar() {
                 {minWidth?
                 <button className="toggleBtn text-center p-0" id="toggleBtnId">
                     {!showMenu?
-                    (<i onClick={expand} className="fa-solid fa-bars m-0 mt-auto" style={{color: "#DB435C", fontSize: "40px"}}></i>)
+                    (<i onClick={expand} className="fa-solid fa-bars m-0 mt-auto" style={{color: "#b5836d", fontSize: "40px"}}></i>)
                     :
-                    (<i onClick={expand} className="fa-solid fa-xmark m-0 mt-auto " style={{color: "#DB435C" ,fontSize: "40px"}}></i>)
+                    (<i onClick={expand} className="fa-solid fa-xmark m-0 mt-auto " style={{color: "#b5836d" ,fontSize: "40px"}}></i>)
                     }
                 </button>
                 :null}
