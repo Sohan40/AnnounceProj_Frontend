@@ -1,16 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Profile.css"
 import Profilepic from './Profilepic';
+import axios from 'axios';
 export default function Profile() {
-    const user = {
-        username:'User',
-        email:'user@student.nitw.ac.in',
-        year:'2',
-        branch:'Computer Science and Engineering'
-    }
-    
+
     const [enable,setEnable] =useState(false);
-    const [val,setVal] =useState(user);
+    const [val,setVal] =useState({});
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get("/api/user/getProfile");
+            console.log(response)
+            let user={
+                email : response.data.email,
+                username : response.data.username,
+                branch : response.data.department,
+                year : response.data.year
+            }
+            setVal(user)
+          } catch (error) {
+            console.log(error)
+          }
+        };
+        fetchData();
+        return () => {
+           };
+      },[]);
+
+
+
+            
+
+      
+    
+    
 
     const updateVal=(e)=>{
         console.log(e)
@@ -42,7 +67,7 @@ export default function Profile() {
                                 <label htmlFor="username">Username</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input type="email" className="form-control" name='email' id="floatingInput" placeholder="name@example.com" disabled value={user.email}/>
+                            <input type="email" className="form-control" name='email' id="floatingInput" placeholder="name@example.com" disabled value={val.email}/>
                                 <label htmlFor="floatingInput">Email address</label>
                         </div>
                         <div className="form-floating mb-3">
@@ -50,7 +75,7 @@ export default function Profile() {
                                 <label htmlFor="year">Year</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input type="text" className="form-control" name='branch' id="branch" placeholder="branch" disabled value={user.branch}/>
+                            <input type="text" className="form-control" name='branch' id="branch" placeholder="branch" disabled value={val.branch}/>
                                 <label htmlFor="floatingPassword">Branch</label>
                         </div>
                         

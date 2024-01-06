@@ -14,6 +14,7 @@
     font-size: 16px;
     cursor: pointer;
     background-color: rgb(73, 141, 164);
+    
   }
   
   .allevents{
@@ -23,5 +24,6 @@
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    justify-content: center;
   }
   

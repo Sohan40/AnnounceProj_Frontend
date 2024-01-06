@@ -4,7 +4,7 @@ function ClubProfile({ club }) {
     return (
         <>
         <div className="club-profile" style={{
-            backgroundImage:`url(${club.img})`,
+            backgroundImage:`url(${club.image})`,
             filter:'blur(2px)',
             backgroundPosition:'center',
             backgroundSize:'cover',
