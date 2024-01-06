@@ -11,8 +11,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PleaseLogin from "./PleaseLogin";
 function App() {
-  const [log, setlog] = useState(0);
-
+ const [log, setlog] = useState(0);
   const [clublog,setClublog]  = useState(0);
   function changeLog() {
     setlog(0);
