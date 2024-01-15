@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-export default function Login(props) {
+export default function Login({setUserlog,setClublog}) {
   const navigate = useNavigate();
   const [type, setType] = useState("password");
   const [message, setmessage] = useState("");
@@ -24,14 +24,14 @@ export default function Login(props) {
           if (res.data == "Invalid password" || res.data == "Verify your Email to continue") {
             setmessage(res.data);
           } else {
-            props.func()
+            setUserlog(1)
             navigate(`/Clubs`);
           }
         }
       } else {
         res = await axios.post("/api/club/login", data);
         if (res.status == 200) {
-          props.func2()
+          setClublog(1)
          
          let res2 = await axios.get("/api/club/getMyClub");
 

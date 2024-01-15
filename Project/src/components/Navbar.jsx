@@ -4,22 +4,7 @@ import Logo from "./images/logo.png";
 import "./Navbar.css";
 import Lists from "./Lists";
 import axios from "axios";
-function Navbar(props) {
-  const [log, setlog] = useState(0);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/user/protected");
-       // console.log(response, "innavbar");
-        setlog();
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-    return () => {};
-  }, []);
-
+function Navbar({userlog,clublog,setUserlog,setClublog}) {
   const handleResize = () => {
     if (window.innerWidth > 768) {
       setShowMenu(false);
@@ -56,7 +41,7 @@ function Navbar(props) {
           </button>
         ) : null}
       </div>
-      <Lists addClass={showMenu}  func={props.func} func2= {props.func2}/>
+      <Lists addClass={showMenu}  userlog={userlog} clublog={clublog} setUserlog={setUserlog}  setClublog={setClublog}/>
     </nav>
   );
 }

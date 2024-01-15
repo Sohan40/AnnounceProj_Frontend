@@ -3,34 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-function Lists(props) {
-  const [log, setlog] = useState(false);
-
-  const [Clublog,setCclublog] = useState(false);
-    const fetchData = async () => {
-      try {
-        try{
-          const response1 = await axios.get("/api/club/protected");
-          setCclublog(1)
-          console.log(response1)
-          return;
-        }
-        catch(error)
-        {
-          console.log("club login",error)
-        }
-
-        const response = await axios.get("/api/user/protected");
-        console.log(response)
-        setlog(1)
-      } catch (error) {
-        setlog(0)
-        console.log(error)
-      }
-    };
-    fetchData();
-
-
+function Lists({addClass,userlog,clublog,setUserlog,setClublog}) {
     const [pathoid,setpathoid] = useState("")
     const fetchClubData = async () => {
         try {
@@ -50,49 +23,41 @@ function Lists(props) {
 
     const handleLogoutClick = async () => {
       try {
-        if (log === 1) {
+        if (userlog === 1) {
           let res = await axios.get("/api/user/logout");
-          console.log(res, "logging out res");
-          //useNavigate('/home')
-          console.log("hi ra bugggi")
-          setlog(false);
           if (res.status === 200) {
-            props.func();
+            setUserlog(0);
           }
         } else {
           let res = await axios.get("/api/club/logout");
-          console.log(res, "logging out club res");
-         // useNavigate('/home')
-          console.log("hi ra bugggi")
-          setCclublog(false);
           if (res.status === 200) {
-            props.func2();
+            setClublog(0);
           }
         }
         // Move useNavigate inside the if-else block
       } catch (error) {
-        console.log(error);
+        console.log("Logout failed");
       }
     };
   return (
     <ul
-      className={`navLinks text-white${props.addClass ? " active" : null}`}
+      className={`navLinks text-white${addClass ? " active" : null}`}
       id="navLinksId"
     >
       <li className="listCss">
         {" "}
         <Link to="/">Home</Link>{" "}
       </li>
-
-      {Clublog&&(<li className="listCss">
+      {clublog ?
+      (<li className="listCss">
         {" "}
         <Link to={pathoid} >ClubPage</Link>{" "}
-      </li>)}
-      {!Clublog&&(<li className="listCss">
+      </li>):null}
+      {!clublog ? (<li className="listCss">
         {" "}
         <Link to="/Clubs">Clubs</Link>{" "}
-      </li>)}
-      {!Clublog&&(<li className="listCss">
+      </li>):null}
+      {!clublog ? (<li className="listCss">
         <span>
           <Link className="profile" to="/Profile">
             <svg
@@ -109,9 +74,9 @@ function Lists(props) {
             </svg>
           </Link>
         </span>
-      </li>)}
+      </li>):null}
 
-      {(log || Clublog)&& (
+      {(userlog || clublog) ? (
         <li className="listCss">
           <span>
             <Link className="logout" onClick={handleLogoutClick}>
@@ -136,7 +101,7 @@ function Lists(props) {
             </Link>
           </span>
         </li>
-      )}
+      ):null}
     </ul>
   );
 }

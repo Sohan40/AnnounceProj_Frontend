@@ -3,36 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-function Home() {
-  const [log, setlog] = useState(0);
-
-  const [clublog,setClublog]  = useState(0);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        try{
-          const response1 = await axios.get("/api/club/protected");
-          setClublog(1)
-          console.log(response1)
-          return;
-        }
-        catch(error)
-        {
-          console.log("club login",error)
-        }
-
-        const response = await axios.get("/api/user/protected");
-        console.log(response)
-        setlog(1)
-      } catch (error) {
-        setlog(0)
-        console.log(error)
-      }
-    };
-    fetchData();
-    return () => {
-       };
-  },[]);
+function Home({log}) {
 
   const navigate = useNavigate();
   const navigateToRegister = () => navigate("/register");
@@ -54,11 +25,11 @@ function Home() {
         </p>
         <div className="signBtnContainer">
           {
-            (!log && !clublog)&&
+            (!log)&&
             <button className="signBtn" onClick={navigateToRegister}>
             Sign Up
           </button>}
-          { (!log && !clublog)&&
+          { (!log)&&
             <button className="signBtn" onClick={navigateToLogin}>
               Sign In
             </button>
